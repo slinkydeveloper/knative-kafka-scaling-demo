@@ -38,7 +38,7 @@ calculate_sleep_time()
   if [[ $exec_time -gt "1000" ]]; then
     thpt="max"
   else
-    thpt=$(do_math "(9*${exec_time})+1000")
+    thpt=$(do_math "(9*${exec_time})+100")
   fi
 
   if [[ $thpt == "max" ]]; then

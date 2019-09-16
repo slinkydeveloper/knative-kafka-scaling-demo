@@ -16,12 +16,10 @@ kind: Service
 metadata:
   name: event-display
 spec:
-  runLatest:
-    configuration:
-      revisionTemplate:
-        metadata:
-          annotations:
-            autoscaling.knative.dev/target: "10"
-        spec:
-          container:
-            image: docker.io/slinkydeveloper/event_display
+  template:
+    metadata:
+      annotations:
+        autoscaling.knative.dev/target: "100"
+    spec:
+      container:
+        image: docker.io/slinkydeveloper/event_display
