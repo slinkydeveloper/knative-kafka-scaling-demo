@@ -3,7 +3,7 @@ kind: KafkaSource
 metadata:
   name: kafka-source
 spec:
-  consumerGroup: knative-group
+  consumerGroup: knative-group-5
   bootstrapServers: my-cluster-kafka-bootstrap.kafka.svc:9092
   topics: my-topic
   sink:

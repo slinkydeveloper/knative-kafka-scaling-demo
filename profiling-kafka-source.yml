@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: kafka-source-profile
+spec:
+  type: NodePort
+  selector:
+    knative-eventing-source-name: kafka-source
+  ports:
+    - protocol: TCP
+      port: 6060
+      targetPort: profile
+      name: profile
